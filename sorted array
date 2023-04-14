@@ -1,0 +1,23 @@
+//check if a given array is sorted or not
+public class sorted {
+    public static boolean sortedarray(int arr[],int i)
+    {
+        if(i==arr.length-1)
+        {
+            return true;
+        }
+        if(arr[i]>arr[i+1])
+        {
+            return false;
+        }
+        return sortedarray(arr,i+1);
+
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,5,4};
+        int i=0;
+        System.out.println(sortedarray(arr,i));
+    
+    }
+    
+}
