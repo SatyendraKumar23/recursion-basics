@@ -1,0 +1,18 @@
+//waf to print the first occurernce of an element in an array
+public class occurence {
+    public static int firstoccurence(int arr[],int key,int i)
+    {
+        if(arr[i]==key)
+        {
+            return i;
+        }
+        return firstoccurence(arr,key,i+1);
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,3,4,5};
+        int key=5;
+        int i=0;
+        System.out.println(firstoccurence(arr,key,i));
+    }
+    
+}
