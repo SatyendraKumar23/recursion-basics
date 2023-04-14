@@ -1,0 +1,23 @@
+//given a 2*n board and tiles of size "2*1",count the nu,ber of ways to tile the given board using the 2*tiles
+//(tile can be placed either vertical or horizonatal)
+public class tilingproblem {
+    public static int tiles(int n)//2xn
+    {
+        if(n==0 || n==1)
+        {
+            return 1;
+        }
+        //vertical
+        int fm1=tiles(n-1);
+        //horizontal
+        int fm2=tiles(n-2);
+        //total ways
+        int fnm=fm1+fm2;
+        return fnm;
+    }   
+    public static void main(String[] args) {
+        int n=3;
+        System.out.println(tiles(n));
+    }
+    
+}
